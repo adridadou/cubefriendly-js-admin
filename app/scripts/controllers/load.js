@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name adminApp.controller:MainCtrl
+ * @name adminApp.controller:LoadCtrl
  * @description
- * # MainCtrl
- * Controller of the cubefriendlyAdmin
+ * # LoadCtrl
+ * Controller of the adminApp
  */
 angular.module('cubefriendlyAdmin')
-  .controller('MainCtrl', function ($scope) {
+  .controller('LoadCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

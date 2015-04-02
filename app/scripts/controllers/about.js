@@ -5,9 +5,9 @@
  * @name adminApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the adminApp
+ * Controller of the cubefriendlyAdmin
  */
-angular.module('adminApp')
+angular.module('cubefriendlyAdmin')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('adminApp', [
+  .module('cubefriendlyAdmin', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -26,6 +26,10 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/load', {
+        templateUrl: 'views/load.html',
+        controller: 'LoadCtrl'
       })
       .otherwise({
         redirectTo: '/'

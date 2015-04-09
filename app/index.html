@@ -8,6 +8,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/dropzone/dist/min/dropzone.min.css" />
+    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -80,6 +82,11 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-wizard/dist/angular-wizard.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -89,6 +96,8 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/load.js"></script>
         <script src="scripts/controllers/cubefriendlyadmin.js"></script>
+        <script src="scripts/services/cubefriendlyconstants.js"></script>
+        <script src="scripts/controllers/processcsv.js"></script>
         <!-- endbuild -->
 </body>
 </html>

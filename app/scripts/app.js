@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mgo-angular-wizard'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,6 +31,10 @@ angular
       .when('/load', {
         templateUrl: 'views/load.html',
         controller: 'LoadCtrl'
+      })
+      .when('/process/csv/:filename',{
+        templateUrl: 'views/processcsv.html',
+        controller: 'ProcesscsvCtrl'
       })
       .otherwise({
         redirectTo: '/'

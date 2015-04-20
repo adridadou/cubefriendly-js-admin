@@ -1,21 +1,25 @@
-<wizard on-finish="finishedWizard()" hide-indicators="true">
+<wizard on-finish="process()" hide-indicators="true">
   <wz-step title="Starting">
     <h1>Let's give it a name</h1>
     <div class="form-group">
       <label for="cubeName">Cube name</label>
-      <input type="text" class="form-control" id="cubeName" placeholder="Enter cube name">
+      <input type="text" class="form-control" id="cubeName" placeholder="Enter cube name" value="{{name}}" ng-model="name">
     </div>
     <input type="submit" wz-next value="Continue" />
   </wz-step>
   <wz-step title="Continuing">
     <h1>Choose metrics</h1>
-    <p>Some values don't need to be indexed. Can you tell us which ones ?</p>
-
+    <p>Some values are just values (like the % of unemployment or the number of people living in a city). Can you tell us which ones ?</p>
+    <label ng-repeat="dim in dimensions" style="display:block">
+      <input type="checkbox" checklist-model="metrics" checklist-value="dim"> {{dim}}<br/>
+    </label>
     <input type="submit" wz-previous value="Edit name" />
     <input type="submit" wz-next value="Continue" />
   </wz-step>
   <wz-step title="More steps">
-    <p>Even more steps!!</p>
-    <input type="submit" wz-next value="Finish now" />
+    <p>Summary</p>
+
+    <input type="submit" wz-previous value="change metrics list" />
+    <input type="submit" wz-next value="create cube" />
   </wz-step>
 </wizard>

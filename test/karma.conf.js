@@ -33,6 +33,10 @@ module.exports = function(config) {
       'bower_components/angular-datatables/dist/angular-datatables.js',
       'bower_components/lodash/dist/lodash.compat.js',
       'bower_components/angular-wizard/dist/angular-wizard.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/bootstrap-duallistbox/src/jquery.bootstrap-duallistbox.js',
+      'bower_components/angular-bootstrap-duallistbox/dist/angular-bootstrap-duallistbox.js',
+      'bower_components/checklist-model/checklist-model.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

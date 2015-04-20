@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'mgo-angular-wizard'
+    'mgo-angular-wizard',
+    'checklist-model'
   ])
   .config(function ($routeProvider) {
     $routeProvider

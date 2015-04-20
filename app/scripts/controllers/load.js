@@ -12,7 +12,7 @@ angular.module('cubefriendlyAdmin')
     var service = {
       files: [],
       loadPendingFiles : function(){
-        $http.get(CubefriendlyConstants.BACKEND + 'admin/load/pending').
+        $http.get(CubefriendlyConstants.BACKEND + 'admin/source/pending').
           success(function(data) {
             service.files = data.map(function(file){return file.file;});
           }).error(function() {
@@ -27,7 +27,6 @@ angular.module('cubefriendlyAdmin')
     $scope.LoadService = LoadService;
 
     $scope.process = function(id) {
-        console.log('processing ' + id);
         $location.url('process/csv/' + id);
     };
 
@@ -40,7 +39,7 @@ angular.module('cubefriendlyAdmin')
   }).directive('dropZone', function(CubefriendlyConstants,LoadService) {
     return function(scope, element) {
       element.dropzone({
-          url: CubefriendlyConstants.BACKEND + 'admin/load',
+          url: CubefriendlyConstants.BACKEND + 'admin/source/load',
           maxFilesize: 100,
           paramName: 'source',
           maxThumbnailFilesize: 5,
